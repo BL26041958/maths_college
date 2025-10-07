@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Révision – Puissances (Collège)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .question input {
+      padding: 5px;
+      width: 100px;
+      margin-top: 8px;
+    }
+    .feedback {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    .correct { color: green; }
+    .incorrect { color: red; }
+    #score {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Révision – Puissances</h1>
+
+  <div id="questions"></div>
+
+  <div style="text-align:center;">
+    <button onclick="checkAnswers()">Corriger ✅</button>
+  </div>
+
+  <div id="score"></div>
+
+  <script>
+    const quizData = [
+      { q: "4² × 4³ = ?", answer: "1024" },
+      { q: "6⁵ ÷ 6² = ?", answer: "216" },
+      { q: "(3²)⁴ = ?", answer: "6561" },
+      { q: "(2 × 5)³ = ?", answer: "1000" },
+      { q: "(3/4)² = ?", answer: "9/16" }
+    ];
+
+    const questionsDiv = document.getElementById('questions');
+
+    quizData.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'question';
+      div.innerHTML = `
+        <div><strong>Question ${index+1} :</strong> ${item.q}</div>
+        <input type="text" id="answer-${index}" placeholder="Votre réponse">
+        <div class="feedback" id="feedback-${index}"></div>
+      `;
+      questionsDiv.appendChild(div);
+    });
+
+    function checkAnswers() {
+      let correctCount = 0;
+      quizData.forEach((item, index) => {
+        const userAnswer = document.getElementById(`answer-${index}`).value.trim();
+        const feedback = document.getElementById(`feedback-${index}`);
+        if (userAnswer === item.answer) {
+          feedback.textContent = "✔️ Bonne réponse !";
+          feedback.className = "feedback correct";
+          correctCount++;
+        } else {
+          feedback.textContent = `❌ Mauvaise réponse. Réponse attendue : ${item.answer}`;
+          feedback.className = "feedback incorrect";
+        }
+      });
+      document.getElementById('score').textContent =
+        `Votre score : ${correctCount} / ${quizData.length}`;
+    }
+  </script>
+
+</body>
+</html>

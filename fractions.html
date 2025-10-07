@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Maths Collège – Fractions</title>
+<style>
+body { font-family: Arial; max-width: 700px; margin: 20px auto; background:#f5f5f5; padding:20px; border-radius:10px;}
+h1 { text-align:center; color:#333;}
+.question { background:white; padding:15px; margin:10px 0; border-radius:8px;}
+.question input { width:100px; padding:5px; margin-top:5px;}
+.feedback { font-weight:bold; margin-top:5px;}
+.correct { color:green;} .incorrect { color:red;}
+#score { text-align:center; font-size:18px; margin-top:20px;}
+button { background:#007bff; color:white; padding:10px 15px; border:none; border-radius:6px; cursor:pointer;}
+button:hover { background:#0056b3;}
+nav { text-align:center; margin-bottom:20px;}
+nav a { margin:0 10px; text-decoration:none; color:#007bff;}
+nav a:hover { text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<h1>📚 Maths Collège – Chapitre : Fractions</h1>
+
+<nav>
+<a href="puissances.html">Puissances</a> | 
+<a href="fractions.html">Fractions</a> | 
+<a href="pgcd.html">PGCD</a> | 
+<a href="racine.html">Racines</a> | 
+<a href="operations_racine.html">Opérations racines</a> | 
+<a href="denom_rationnel.html">Dénominateur rationnel</a>
+</nav>
+
+<p><strong>Rappels :</strong></p>
+<ul>
+<li>Pour additionner ou soustraire : même dénominateur</li>
+<li>Pour multiplier : on multiplie numérateur × numérateur, dénominateur × dénominateur</li>
+<li>Pour diviser : on multiplie par l’inverse</li>
+<li>On simplifie toujours la fraction</li>
+</ul>
+
+<div id="questions"></div>
+
+<div style="text-align:center;">
+<button onclick="checkAnswers()">Corriger ✅</button>
+</div>
+
+<div id="score"></div>
+
+<script>
+const quizData = [
+  { q:"1/2 + 1/4 = ?", answer:"3/4" },
+  { q:"3/5 - 1/5 = ?", answer:"2/5" },
+  { q:"2/3 × 3/4 = ?", answer:"1/2" },
+  { q:"5/6 ÷ 2/3 = ?", answer:"5/4" },
+  { q:"Simplifier 8/12 = ?", answer:"2/3" }
+];
+
+const questionsDiv = document.getElementById('questions');
+
+quizData.forEach((item,index)=>{
+  const div = document.createElement('div');
+  div.className='question';
+  div.innerHTML=`<div><strong>Question ${index+1} :</strong> ${item.q}</div>
+  <input type="text" id="answer-${index}" placeholder="Votre réponse">
+  <div class="feedback" id="feedback-${index}"></div>`;
+  questionsDiv.appendChild(div);
+});
+
+function checkAnswers(){
+  let correctCount=0;
+  quizData.forEach((item,index)=>{
+    const userAnswer = document.getElementById(`answer-${index}`).value.trim();
+    const feedback = document.getElementById(`feedback-${index}`);
+    if(userAnswer===item.answer){
+      feedback.textContent="✔️ Bonne réponse !";
+      feedback.className="feedback correct";
+      correctCount++;
+    }else{
+      feedback.textContent=`❌ Mauvaise réponse. Réponse attendue : ${item.answer}`;
+      feedback.className="feedback incorrect";
+    }
+  });
+  document.getElementById('score').textContent=`Votre score : ${correctCount}/${quizData.length}`;
+}
+</script>
+
+</body>
+</html>

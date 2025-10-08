@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: '29LT Riwaya Informal', sans-serif;
-            background: #f0f2f5;
+            background: #e0f0ff; /* bleu pastel très clair */
             color: #333;
         }
 
@@ -56,27 +56,30 @@
         }
         .intro h2 {
             font-size: 2.2em;
-            color: #2c3e50;
+            color: #5D3A9B; /* violet foncé pour les titres */
             margin-bottom: 10px;
         }
         .intro p {
             font-size: 1.2em;
-            color: #555;
+            color: #333;
         }
 
-        /* Cartes de leçons */
+        /* Cartes de la matière */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            justify-items: center;
         }
         .card {
-            background: #fff;
+            background: #fff; /* cartes blanches */
             padding: 30px;
             border-radius: 16px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 300px;
         }
         .card:hover {
             transform: translateY(-8px);
@@ -84,20 +87,20 @@
         }
         .card a {
             text-decoration: none;
-            color: #2980b9;
+            color: #7B5FA5; /* violet doux */
             font-weight: bold;
             font-size: 1.3em;
             display: block;
             margin-top: 15px;
         }
         .card a:hover {
-            color: #1c5980;
+            color: #5D3A9B; /* violet foncé au hover */
         }
 
         footer {
             text-align: center;
             padding: 30px 20px;
-            background: #2c3e50;
+            background: #2c3e50; /* bleu foncé */
             color: #fff;
             margin-top: 60px;
             font-size: 1em;
@@ -109,40 +112,20 @@
 <header>
     <div class="overlay">
         <h1>Bienvenue sur Maths College</h1>
-        <p>Réviser, comprendre et progresser pas à pas</p>
+        <p>Commencez vos révisions de Maths dès maintenant !</p>
     </div>
 </header>
 
 <main>
     <div class="intro">
         <h2>Commencez vos leçons</h2>
-        <p>Choisissez votre matière et lancez-vous dans l’apprentissage.</p>
+        <p>Lancez-vous dans l’apprentissage pas à pas.</p>
     </div>
 
     <div class="cards">
         <div class="card">
-            <span>Puissances</span>
-            <a href="puissances_lecons.html">Voir la leçon</a>
-        </div>
-        <div class="card">
-            <span>PGCD</span>
-            <a href="pgcd_lecons.html">Voir la leçon</a>
-        </div>
-        <div class="card">
-            <span>Fractions</span>
-            <a href="fractions_lecons.html">Voir la leçon</a>
-        </div>
-        <div class="card">
-            <span>Dénominateur rationnel</span>
-            <a href="denom_rationnel_lecons.html">Voir la leçon</a>
-        </div>
-        <div class="card">
-            <span>Racines</span>
-            <a href="racines_lecons.html">Voir la leçon</a>
-        </div>
-        <div class="card">
-            <span>Opérations sur les racines</span>
-            <a href="operations_racine_lecons.html">Voir la leçon</a>
+            <span>Maths</span>
+            <a href="maths_lecons.html">Voir la leçon</a>
         </div>
     </div>
 </main>

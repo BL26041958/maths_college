@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mes cours de maths</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Maths Collège</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4e73df, #1cc88a);
-      color: #fff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
     }
+
     header {
+      position: relative;
       width: 100%;
-      height: 250px;
-      background: url('https://raw.githubusercontent.com/BL26041958/maths_college/main/d9c4a839-40b2-463b-99e9-d76c4ecd59e3.png') no-repeat center/cover;
+      height: 60vh;
+      background: url('https://raw.githubusercontent.com/BL26041958/maths_college/main/d9c4a839-40b2-463b-99e9-d76c4ecd59e3.png') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: white;
       text-align: center;
     }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+    }
+
     header h1 {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 2rem;
+      position: relative;
+      font-size: 3rem;
+      font-weight: 600;
+      z-index: 1;
     }
+
     main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 15px;
+      padding: 40px 20px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    a.course {
+
+    .card {
       background: white;
-      color: #2c3e50;
-      text-decoration: none;
-      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 20px;
-      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-    a.course:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
-    @media(max-width: 600px){
-      main { grid-template-columns: 1fr; }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📘 Mes cours de maths</h1>
+    <h1>Bienvenue sur Maths Collège</h1>
   </header>
+
   <main>
-    <a class="course" href="puissances.html">Puissances</a>
-    <a class="course" href="pgcd.html">PGCD</a>
-    <a class="course" href="fractions.html">Fractions</a>
-    <a class="course" href="racine.html">Racines</a>
-    <a class="course" href="opérations_racine.html">Opérations sur les racines</a>
-    <a class="course" href="denom_rationnel.html">Dénominateur rationnel</a>
+    <div class="card">
+      <h2>Leçons</h2>
+      <p>Accédez à des cours clairs et structurés pour tous les niveaux du collège.</p>
+    </div>
+    <div class="card">
+      <h2>Exercices</h2>
+      <p>Entraînez-vous grâce à des séries progressives et corrigées pas à pas.</p>
+    </div>
+    <div class="card">
+      <h2>Ressources</h2>
+      <p>Découvrez des fiches pratiques, résumés et outils pour aller plus loin.</p>
+    </div>
   </main>
+
 </body>
 </html>
-

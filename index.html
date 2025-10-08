@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Mes cours de maths</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      min-height: 100vh;
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: #fff;
+    }
+    header {
+      width: 100%;
+      height: 250px;
+      background: url('https://raw.githubusercontent.com/BL26041958/maths_college/main/d9c4a839-40b2-463b-99e9-d76c4ecd59e3.png') no-repeat center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg,#4e73df,#1cc88a);
-      color: #fff;
       text-align: center;
     }
-    .card {
-      background: rgba(255,255,255,0.08);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      width: 95%;
-      max-width: 520px;
+    header h1 {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 2rem;
     }
-    h1 { margin: 0 0 16px; font-size: 2rem; }
-    .menu { display: grid; gap: 10px; grid-template-columns: 1fr; }
-    a {
-      display: block;
-      padding: 12px 14px;
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    a.course {
       background: white;
       color: #2c3e50;
-      border-radius: 8px;
       text-decoration: none;
-      font-weight: 700;
-      transition: transform .18s ease, box-shadow .18s ease;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    a:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
-    @media(min-width:600px){ .menu{grid-template-columns: 1fr 1fr;} }
+    a.course:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    @media(max-width: 600px){
+      main { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
+  <header>
     <h1>📘 Mes cours de maths</h1>
-    <p>Clique sur un cours pour l’ouvrir :</p>
-    <div class="menu">
-      <a href="puissances.html">Puissances</a>
-      <a href="pgcd.html">PGCD</a>
-      <a href="fractions.html">Fractions</a>
-      <a href="racine.html">Racines</a>
-      <a href="opérations_racine.html">Opérations sur les racines</a>
-      <a href="denom_rationnel.html">Dénominateur rationnel</a>
-    </div>
-  </div>
+  </header>
+  <main>
+    <a class="course" href="puissances.html">Puissances</a>
+    <a class="course" href="pgcd.html">PGCD</a>
+    <a class="course" href="fractions.html">Fractions</a>
+    <a class="course" href="racine.html">Racines</a>
+    <a class="course" href="opérations_racine.html">Opérations sur les racines</a>
+    <a class="course" href="denom_rationnel.html">Dénominateur rationnel</a>
+  </main>
 </body>
 </html>
+

@@ -1,54 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Cours de Maths</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-
-.container {
-    max-width: 900px;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-button {
-    font-size: 1.5em;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçons de Maths</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .card a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: block;
+            margin-top: 10px;
+        }
+        .card a:hover {
+            color: #1c5980;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2980b9;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        nav a:hover {
+            color: #1c5980;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Sur mon site !</h1>
-    <button onclick="alert('Bouton Commencer cliqué !')">Commencer</button>
-</div>
+<header>
+    <h1>Leçons de Maths</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="pgcd_lecons.html">PGCD</a>
+    <a href="fractions_lecons.html">Fractions</a>
+    <a href="racines_lecons.html">Racines</a>
+</nav>
+
+<main>
+    <h2>Choisis une leçon</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <span>Puissances</span>
+            <a href="puissances_lecons.html">Voir la leçon</a>
+        </div>
+        <div class="card">
+            <span>PGCD</span>
+            <a href="pgcd_lecons.html">Voir la leçon</a>
+        </div>
+        <div class="card">
+            <span>Fractions</span>
+            <a href="fractions_lecons.html">Voir la leçon</a>
+        </div>
+        <div class="card">
+            <span>Dénominateur rationnel</span>
+            <a href="denom_rationnel_lecons.html">Voir la leçon</a>
+        </div>
+        <div class="card">
+            <span>Racines</span>
+            <a href="racines_lecons.html">Voir la leçon</a>
+        </div>
+        <div class="card">
+            <span>Opérations sur les racines</span>
+            <a href="operations_racine_lecons.html">Voir la leçon</a>
+        </div>
+    </div>
+</main>
 
 </body>
 </html>

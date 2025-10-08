@@ -1,15 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 900px;   /* Augmente la largeur pour que le titre tienne */
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: 0;
+    padding: 0;
     background: #f5f5f5;
-    text-align: center;  /* Centre le titre et le bouton */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* occupe toute la hauteur de la fenêtre */
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 3em;       /* Taille du titre plus grande */
-    line-height: 1.2;     /* Espace entre les lignes */
+    font-size: 3em;
+    line-height: 1.2;
     color: #333;
     margin-bottom: 30px;
 }
@@ -28,7 +36,3 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-   
-     
-    
-    

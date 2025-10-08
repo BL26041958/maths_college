@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: '29LT Riwaya Informal', sans-serif;
-            background: #FFF7E6; /* fond crème clair */
+            background: #FFFDE7; /* fond jaune très clair */
             color: #333;
         }
 
@@ -27,7 +27,7 @@
             color: #fff;
         }
         header .overlay {
-            background-color: rgba(255, 111, 97, 0.7); /* corail vif semi-transparent */
+            background-color: rgba(76, 175, 80, 0.7); /* vert vif semi-transparent */
             width: 100%;
             height: 100%;
             display: flex;
@@ -57,7 +57,7 @@
         }
         .intro h2 {
             font-size: 2.2em;
-            color: #FF3D7F; /* rose vif */
+            color: #FF9800; /* orange vif */
             margin-bottom: 10px;
         }
         .intro p {
@@ -89,27 +89,35 @@
         .card span {
             font-size: 1.4em;
             font-weight: bold;
-            color: #FF5722; /* orange vif */
+            color: #4CAF50; /* vert vif */
         }
         .card a {
             text-decoration: none;
-            color: #E91E63; /* rose intense */
+            color: #2196F3; /* bleu vif */
             font-weight: bold;
             font-size: 1.2em;
             display: block;
             margin-top: 15px;
         }
         .card a:hover {
-            color: #FF3D7F; /* rose vif */
+            color: #0D47A1; /* bleu profond au hover */
         }
 
         footer {
             text-align: center;
             padding: 30px 20px;
-            background: #FF6F61; /* corail vif */
+            background: #388E3C; /* vert foncé */
             color: #fff;
             margin-top: 60px;
             font-size: 1.2em;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            header h1 { font-size: 2.2em; }
+            header p { font-size: 1.2em; }
+            .intro h2 { font-size: 1.6em; }
+            .intro p { font-size: 1em; }
         }
     </style>
 </head>

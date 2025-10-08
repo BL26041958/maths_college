@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leçons de Maths</title>
+    <title>Accueil - Maths College</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,27 +17,39 @@
             background: #2c3e50;
             color: #fff;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             font-family: 'Playfair Display', serif;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
             letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #dcdcdc;
         }
         main {
             max-width: 900px;
             margin: 30px auto;
             padding: 0 20px;
         }
-        h2 {
+        .intro {
             text-align: center;
-            color: #2c3e50;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 30px;
-            font-size: 2em;
+            margin-bottom: 40px;
         }
-        .card-container {
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .intro p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -60,45 +72,34 @@
             font-weight: bold;
             font-size: 1.1em;
             display: block;
-            margin-top: 10px;
+            margin-top: 15px;
         }
         .card a:hover {
             color: #1c5980;
         }
-        nav {
+        footer {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #2980b9;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1em;
-        }
-        nav a:hover {
-            color: #1c5980;
-            text-decoration: underline;
+            padding: 30px 20px;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Leçons de Maths</h1>
+    <h1>Bienvenue sur Maths College</h1>
+    <p>Apprendre les maths facilement, pas à pas</p>
 </header>
 
-<nav>
-    <a href="index.html">Accueil</a>
-    <a href="pgcd_lecons.html">PGCD</a>
-    <a href="fractions_lecons.html">Fractions</a>
-    <a href="racines_lecons.html">Racines</a>
-</nav>
-
 <main>
-    <h2>Choisis une leçon</h2>
+    <div class="intro">
+        <h2>Commencer</h2>
+        <p>Choisis une matière pour accéder aux leçons et exercices correspondants.</p>
+    </div>
 
-    <div class="card-container">
+    <div class="cards">
         <div class="card">
             <span>Puissances</span>
             <a href="puissances_lecons.html">Voir la leçon</a>
@@ -125,6 +126,10 @@
         </div>
     </div>
 </main>
+
+<footer>
+    &copy; 2025 Maths College. Tous droits réservés.
+</footer>
 
 </body>
 </html>
